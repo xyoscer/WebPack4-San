@@ -2,6 +2,9 @@
  * Created by XiYin on 03/05/2018.
  */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -25,5 +28,19 @@ module.exports = {
             }
         ]
 
-    }
+    },
+    devServer:{
+        contentBase: path.join(__dirname,"dist"),
+        compress: true,
+        hot:true,
+        port: 8080
+    },
+    plugins:[
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };

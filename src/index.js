@@ -6,7 +6,7 @@ let  MyApp = san.defineComponent({
 
     initData: function () {
         return {
-            name: ' XiYin Hello World Parcel环境搭建111'
+            name: ' XiYin Hello World Parcel环境搭建'
         };
     }
 });
