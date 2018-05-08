@@ -1,0 +1,17 @@
+<template>
+    <p class="hello">{{msg}}</p>
+</template>
+<script>
+    export default {
+        initData() {
+            return {
+                msg: 'hello Webpack San'
+            }
+        }
+    }
+</script>
+<style>
+    .hello {
+        color: red;
+    }
+</style>
