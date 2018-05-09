@@ -1,16 +1,9 @@
 /**
  * Created by XiYin on 03/05/2018.
  */
-let  MyApp = san.defineComponent({
-    template: '<p>{{name}}!</p>',
+import san from 'san'
+import {router} from 'san-router'
+import Hello from './hello.san'
 
-    initData: function () {
-        return {
-            name: ' XiYin Hello World Parcel环境搭建'
-        };
-    }
-});
-
-
-let  myApp = new MyApp();
-myApp.attach(document.body);
+router.add({rule: '/', Component:Hello, target:'#app'});
+router.start();
