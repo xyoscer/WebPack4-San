@@ -9,5 +9,10 @@ module.exports = merge(common,{
     mode:'production',
     plugins:[
         new UglifyJSPlugin(),
-    ]
+    ],
+    resolve: {
+        alias: {
+            san: 'san/dist/san.js'
+        }
+    },
 });

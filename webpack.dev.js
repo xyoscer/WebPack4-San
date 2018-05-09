@@ -15,6 +15,11 @@ module.exports = merge(common,{
         hot:true,
         port: 8080
     },
+    resolve: {
+        alias: {
+            san: 'san/dist/san.dev.js'
+        }
+    },
     plugins:[
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
